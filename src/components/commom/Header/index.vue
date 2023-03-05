@@ -7,13 +7,8 @@
       </span>
       <span class="header__boxTitle__title">Jira</span>
     </div>
-    <span class="header__text">Seu Trabalho</span>
-    <span class="header__text">Projetos</span>
-    <span class="header__text">Filtros</span>
-    <span class="header__text">Painéis</span>
-    <span class="header__text">Pessoas Planos</span>
-    <span class="header__text">Aplicativos</span>
-    <v-btn class="header__btn">Criar</v-btn>
+    <Select />
+    <v-btn @click="creatElement" class="header__btn">Criar</v-btn>
     <div cols="3" rows="1" class="header__campText">
       <v-text-field
         variant="outlined"
@@ -30,6 +25,7 @@
 </template>
 
 <script setup lang="ts">
+import Select from "@/components/commom/Select/index.vue";
 import { Ref, ref } from "vue";
 
 const items: Ref<any> = ref([
@@ -41,6 +37,10 @@ const items: Ref<any> = ref([
   "item1",
   "item1",
 ]);
+
+const creatElement = () => {
+  alert("funcionou");
+};
 </script>
 
 <style lang="scss" scoped>
@@ -68,13 +68,7 @@ const items: Ref<any> = ref([
       margin-bottom: 15px;
     }
   }
-  &__text {
-    font-size: 16px;
-    font-family: sans-serif;
-    font-weight: bolder;
-    margin-bottom: 15px;
-    cursor: pointer;
-  }
+
   &__camp {
     width: 150px;
     height: 80% !important;
@@ -86,7 +80,7 @@ const items: Ref<any> = ref([
   }
   &__btn {
     color: #fff;
-    background: #0000ff;
+    background: #2b2f78;
     margin-bottom: 20px;
   }
   &__icons {
