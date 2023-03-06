@@ -31,6 +31,8 @@ const selectItem = (item: any) => {
     router.push({ name: "Work" });
   } else if (step.value === 1) {
     router.push({ name: "Projects" });
+  } else {
+    router.push({ name: "Error" });
   }
 };
 </script>

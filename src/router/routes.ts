@@ -2,6 +2,7 @@ import Home from "@/views/Home.vue";
 
 import Work from "@/components/pages/Work/index.vue";
 import Projets from "@/components/pages/Projects/index.vue";
+import Error from "@/components/pages/Error/index.vue";
 
 const routes = [
   {
@@ -15,6 +16,7 @@ const routes = [
         component: Work,
       },
       { path: "/projects", name: "Projects", component: Projets },
+      { path: "/error", name: "Error", component: Error },
     ],
   },
 ];
