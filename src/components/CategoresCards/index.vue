@@ -25,29 +25,32 @@
 </template>
 
 <script lang="ts" setup>
-import { Ref, ref } from "vue";
+import { Ref, ref, defineProps } from "vue";
 
 const items: Ref<any> = ref([
   {
-    text: "de um remédio, um manual de instruções ou uma receita culinária. Esse tipo de texto pretende orientar o leitor e transmitir informações sem a necessidade de",
-    name: "jefferson",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+    name: "Juliana",
     img: "https://www.fasdapsicanalise.com.br/content/uploads/2020/08/A-CI%C3%8ANCIA-REVELA-O-QUE-A-FOTO-DO-SEU-PERFIL-DIZ-SOBRE-A-SUA-PERSONALIDADE.jpg",
     id: 0,
   },
   {
-    text: "Alguns exemplos são a bula de um remédio de instruções ou uma receita culinária. Esse tipo de texto pretende orientar o leitor e transmitir informações sem a necessidade de",
-    name: "jefferson",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+    name: "Matheus",
     img: "https://ef564920920608e03abb-7d34ef097b6ab6c586dfc84157128505.ssl.cf1.rackcdn.com/PostImagem/36734/foto-de-perfil-profissional_o1eh30s23krp31qn41l3havc2fti_capa_3.jpg",
     id: 1,
   },
   {
-    text: "Alguns exemplos são a bula de um remédio, um manual de instruções ou uma receita culinária. Esse tipo de texto pretende orientar o leitor e transmitir informações sem a necessidade de",
-    name: "jefferson",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+    name: "Joana",
     img: "https://s2.glbimg.com/Hag3JEWvLvMo2dc32cQddw8aMWM=/0x0:850x572/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2022/d/v/kFDwF0T3q2wkwvGH0DjA/whatsapp-image-2022-10-03-at-15.34.37.jpeg",
     id: 2,
   },
 ]);
-const title: Ref<string> = ref("titulo  24");
+
+defineProps<{
+  title: string;
+}>();
 
 function checkNumber(item: any) {
   if (item % 2 === 0) {

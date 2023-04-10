@@ -1,10 +1,9 @@
 <template>
   <div class="home__boxTitle__content">
-    <CategoreCards />
-    <CategoreCards />
-    <CategoreCards />
-    <CategoreCards />
-    <CategoreCards />
+    <CategoreCards :title="'titulo 1'" />
+    <CategoreCards :title="'titulo 2'" />
+    <CategoreCards :title="'titulo 3'" />
+    <CategoreCards :title="'titulo 4'" />
   </div>
 </template>
 <script lang="ts" setup>

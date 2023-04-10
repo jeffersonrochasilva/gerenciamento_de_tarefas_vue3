@@ -39,7 +39,7 @@ const items: Ref<any> = ref([
 ]);
 
 const creatElement = () => {
-  alert("funcionou");
+  alert("hello word");
 };
 </script>
 
